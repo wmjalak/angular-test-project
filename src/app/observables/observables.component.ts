@@ -1,17 +1,7 @@
-import { OnInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { fromEvent, interval, of, Observable } from 'rxjs';
-import { ajax } from 'rxjs/ajax';
-import {
-  delay,
-  map,
-  filter,
-  tap,
-  mergeMap,
-  debounceTime,
-  distinctUntilChanged,
-  switchMap
-} from 'rxjs/operators';
+import { interval, of } from 'rxjs';
+import { delay, map, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-observables',

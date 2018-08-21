@@ -1,25 +1,14 @@
 import { OnInit, Component } from '@angular/core';
 
-import { fromEvent, interval, of, Observable } from 'rxjs';
+import { of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import {
-  delay,
-  map,
-  filter,
-  tap,
-  mergeMap,
-  debounceTime,
-  distinctUntilChanged,
-  concatMap,
-  switchMap
-} from 'rxjs/operators';
+import { delay, concatMap, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-multiple-requests',
   templateUrl: './multiple-requests.component.html'
 })
 export class MultipleRequestsComponent {
-
   fakeTheConnection = false;
 
   constructor(private http: HttpClient) {}
@@ -44,10 +33,8 @@ export class MultipleRequestsComponent {
   }
 
   onMultipleRequestsPressed() {
-
     // this.concatMapExample();
     this.switchMapExample();
-
   }
 
   concatMapExample() {
@@ -97,5 +84,4 @@ export class MultipleRequestsComponent {
       () => {}
     );
   }
-
 }

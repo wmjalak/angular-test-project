@@ -1,17 +1,4 @@
-import { OnInit, Component } from '@angular/core';
-
-import { fromEvent, interval, of, Observable } from 'rxjs';
-import { ajax } from 'rxjs/ajax';
-import {
-  delay,
-  map,
-  filter,
-  tap,
-  mergeMap,
-  debounceTime,
-  distinctUntilChanged,
-  switchMap
-} from 'rxjs/operators';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -19,16 +6,6 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-
-  /*
-  simpleObservable = new Observable((observer) => {
-    observer.next('simpleObservable: bla bla blaa');
-    observer.complete();
-  });
-  */
-
-  simpleObservable: Observable<string>;
 
   testMiscThings() {
     const statistics = [
